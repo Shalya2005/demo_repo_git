@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Bill Generator</title>
+<link rel="stylesheet" href="bill_style.css"/>
+<script type="text/javascript" src="bill_script.js"></script>
+</head>
+<body>
+<h1 align="center">Bill Generator</h1>
+<table align="center" height="60%" width="50%" border=3 style="border:5px solid blue">
+<tr align="center" height="20%">
+<th width="10%"></th>
+<th width="50%">Item</th>
+<th width="10%">Cost</th>
+<th width="10%">Quantity</th>
+<th width="20%">Amount</th>
+</tr>
+<tr align="center" height="20%">
+<td width="10%"><input type="checkbox" id="soapchk" value="soap" onchange="toggle(this.id,this.value);"/></td>
+<td width="50%">Soap 100g</td>
+<td width="10%">Rs.40/-</td>
+<td width="10%"><input type="text" id="soap-qty" disabled=true onchange="amt_update(this.id);"/></td>
+<td width="20%"><input type="text" id="soap-amt" disabled=true/></td>
+</tr>
+<tr align="center" height="20%">
+<td width="10%"><input type="checkbox" id="ricechk" value="rice" onchange="toggle(this.id,this.value);"/></td>
+<td width="50%">rice</td>
+<td width="10%">Rs.50/-</td>
+<td width="10%"><input type="text" id="rice-qty" disabled=true onchange="amt_update(this.id);"/></td>
+<td width="20%"><input type="text" id="rice-amt" disabled=true/></td>
+</tr>
+<tr align="center" height="20%">
+<td width="10%"><input type="checkbox" id="chocolatechk" value="chocolate" onchange="toggle(this.id,this.value);"/></td>
+<td width="50%">Dairy Milk Eclairs</td>
+<td width="10%">Rs.1/-</td>
+<td width="10%"><input type="text" id="chocolate-qty" disabled=true onchange="amt_update(this.id);"/></td>
+<td width="20%"><input type="text" id="chocolate-amt" disabled=true/></td>
+</tr>
+<tr align="center" height="20%">
+<td width="10%"><input type="checkbox" id="milkchk" value="milk" onchange="toggle(this.id,this.value);"/></td>
+<td width="50%">milk</td>
+<td width="10%">Rs.42/-</td>
+<td width="10%"><input type="text" id="milk-qty" disabled=true onchange="amt_update(this.id);"/></td>
+<td width="20%"><input type="text" id="milk-amt" disabled=true/></td>
+</tr>
+</table>
+<br/><br/>
+<center>
+<input type="button" id="gen" value="SUBMIT" onclick="generate();"/>&nbsp&nbsp
+<input type="button" id="clr" value="RESET" onclick="clear_all();"/>
+<br/><br/>
+<div id="all_totals">
+Total Amount:<span id="tot"></span><br/>
+CGST (8%):<span id="ctax"></span><br/>
+SGST (8%):<span id="stax"></span><br/>
+Grand Total:<span id="gtot"></span><br/>
+</div>
+</center>
+</body>
+</html>
