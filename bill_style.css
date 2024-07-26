@@ -1,0 +1,45 @@
+h1 {
+     font-size:2.5cm;
+     color:brown;
+     background-color:skyblue;
+    }
+    
+input[type="checkbox"] {
+                         height:75%;
+                         width:75%;
+                        }
+                        
+th {
+     font-size:30px;
+    } 
+    
+td {
+     font-size:20px;
+    }   
+    
+input[type="text"] {
+                         font-size:1cm;
+                         height:75%;
+                         width:90%;
+                        } 
+
+input[type="button"] {
+                         height:1.5cm;
+                         width:auto;
+                         background-color:skyblue;
+                         font-size:1cm;
+                        } 
+                        
+#all_totals {
+               font-size:1cm;
+               font-style:normal;
+               font-weight:bold;
+               text-align:center;
+               visibility:hidden;
+            }
+            
+#tot, #ctax, #stax, #gtot {
+                            font-size:1cm;
+                            font-style:italic;
+                            font-weight:normal;
+                          }                                                         
